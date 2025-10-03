@@ -286,6 +286,20 @@ grep "wall=" timing_results.log
 100% estimate: ~2850 seconds = 27.5 minutes
 :::
 
+
+## If it is nor linear...
+
+If the relationship is not linear, you can use Excel to add a trendline to your chart and choose to display the equation.
+
+![Benchmark with a quadratic trend](img/quadratic.png)
+
+## If it is nor linear...
+
+A polynomial of order 2 or 3 is generally a good option for capturing non-linear trends.
+
+![Forecasting the runtime with all the data](img/quadratic_forecast.png)
+
+
 # Benchmarking on HPC Systems
 
 ## Interactive Benchmarking
@@ -348,6 +362,16 @@ Peak memory: ~2GB
 :::
 
 
+## Estimating GPU Time Requirements
+
+The same benchmarking principles used for CPU-based tasks apply generally to GPU workloads.
+
+However, GPUs often have longer warm-up times. Consider factors like batch size, data transfer overhead, and GPU memory usage, which can significantly affect runtime.
+
+To get accurate estimates, benchmarks should be run with sufficiently large datasets to reflect realistic performance.
+
+
+
 # Converting to Resource Requests
 
 ## From Benchmarks to Core-Hours
@@ -384,7 +408,7 @@ Base cost: 30 × 50 runs = 1,500 core-hours
 
 Safety factors:
 
-- 1.5× (failures)
+- 1.4× (failures)
 - 2.0× (development)
 - 1.2× (scaling error)  
 
