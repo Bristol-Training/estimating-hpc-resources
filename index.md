@@ -366,10 +366,14 @@ Peak memory: ~2GB
 
 The same benchmarking principles used for CPU-based tasks apply generally to GPU workloads.
 
+<br>
 However, GPUs often have longer warm-up times. Consider factors like batch size, data transfer overhead, and GPU memory usage, which can significantly affect runtime.
 
+<br>
 To get accurate estimates, benchmarks should be run with sufficiently large datasets to reflect realistic performance.
 
+<br>
+**Isambard-AI**: using 1 GPU for 1 hour would be counted as 0.25 hours of resource use
 
 
 # Converting to Resource Requests
